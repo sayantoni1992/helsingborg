@@ -1,3 +1,8 @@
+
+body {
+    font-family: Roboto, system, Segoe UI, Tahoma, -apple-system;
+}
+
 .logotype {
     width : 250px;
     height : 70px;
@@ -39,7 +44,6 @@ ul {
     color: #252525;
     box-shadow: 0 2px 3px rgba(0,0,0,.08);
     font-size: 15.2px;
-    font-family: Roboto;
     font-weight: 400;
     float: left;
     padding: 4px 10px 3px;
@@ -81,9 +85,10 @@ ul {
 .slider-image {
     width : 100%;
     height: 350px;
+    background-image: url(https://helsingborg.se/wp-content/uploads/2017/05/strandpromenad-1-anna-alexander-olsson-1800x350-1-1800x350.jpg);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /*align-items: center;
+    justify-content: center;*/
 }
 
 .slider-image-fem {
@@ -113,6 +118,40 @@ ul {
     color:black;
 }
 
+.stripes {
+    width: 20px;
+    height: 350px;
+    z-index: 99;
+    
+}
+
+.stripes div {
+    width: 20px;
+    height: 20%;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.stripes div:nth-child(1) {
+    background-color: #f7a600;
+}
+
+.stripes div:nth-child(2) {
+    background-color: #cb0050;
+}
+
+.stripes div:nth-child(3) {
+    background-color: #ec6701;
+}
+
+.stripes div:nth-child(4) {
+    background-color: #ae0b05;
+}
+
+.stripes div:nth-child(5) {
+    background-color: #e3000f;
+}
+
 
 
 /*---------------------Search------------------------------------------------------*/
@@ -123,6 +162,10 @@ ul {
     padding: 5.28px 10.56px;
     background-color: #ae0b05;
     color: white;
+}
+
+.search-form{
+    margin: auto;
 }
 .button-submit {
     background-color: #ec6701;
@@ -153,6 +196,7 @@ ul {
 
 .after {
     background-color: #f4f4f4;
+    padding: 50px;
 }
 
 
@@ -164,7 +208,7 @@ ul {
 }
 
 .box-container-image {
-    width : 25%;
+    width : 30%;
     height: auto;
     box-sizing: border-box;
     background-color: white;
@@ -178,8 +222,7 @@ ul {
     margin: 10px;
     padding: 40px 0px;
     flex-direction: row;
-    justify-content: space-around;
-
+    justify-content: space-between;
     align-items: flex-start;
     background-color: #f4f4f4;
 }
@@ -187,13 +230,14 @@ ul {
 
 .box-index-title {
     color: #cb0050;
-    display: block;
+    display: inline-block;
+    box-sizing : border-box;
     line-height: 24px;
     /*margin-top: -2px;*/
-    padding-left: 30px;
+    padding-left: 20px;
     padding-bottom: .5em;
+    padding-right: 20px;
     font-size: 19px;
-    text-justify: auto;
     
 }
 
@@ -236,7 +280,7 @@ block-level{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     background-color:#f4f4f4;
     margin: 10px;
@@ -244,8 +288,33 @@ block-level{
 
 }
 
+.icon-shape {
+    max-width: 50px;
+    color: rgba(0,0,0,.4);
+    transition: color 150ms;
+    font-family: FontAwesome;
+    display: inline-block;
+
+}
+
+.arrow-circle-right {
+    margin-right: 10px;
+}
+
+
+.arrow-circle-right:before {
+    content: "\f18e";
+}
+
+.plus-circle-right {
+    content: "\f055";
+    position: absolute;
+    right: 10px;
+    color: rgba(0,0,0,.4);
+}
+
 .flex-items{
-    width: 40%;
+    width: 45%;
     height: auto;
     background-color: white;
 
@@ -257,9 +326,8 @@ section{
     background-color: rgba(0, 0, 0, 0.01);
     border: 1px solid #e5e5e5;
     box-sizing : border-box;
-    font-family: Roboto;
     font-size: 16px;
-    padding-left:5px;
+    padding-left:16px;
     /*font-weight: 400;*/
 
 }
@@ -270,44 +338,11 @@ section{
     box-shadow: 0 2px 3px rgba(0,0,0,.08);
 }
 
-/*.accordion-toggle:before {
-    font-family: hbg-pricons;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: -15%;
-    content: "";
-    font-size: 1em;
-    color: #7f7f7f;
-}
-*/
-
-.toggle-icon {
-    font-weight: 800;
-}
 
 a.container-style {
     color: #ae0b05;
 }
 
-/*------------------------News----------------------------------*/
-
-.icon {font-family: hbg-pricons;
-line-height: 1;
-text-rendering: auto;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-vertical-align: -15%;
-content: "";
-display: inline-block;
-width: 20px;
-height: 20px;
-margin-right: .5em;
-color: rgba(0,0,0,.4);
-margin-left: calc(-20px - .5em);
-text-decoration: none;
-}
 
 /*----------------------Events------------------------------*/
 
